@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsPractice {
@@ -26,8 +27,12 @@ public class MethodsPractice {
 //    System.out.println(isPrime(4));
 //    System.out.println(isPrime(3));
 //    System.out.println(isPrime(1));
-    System.out.println(isPrime(33));
-//    getTwentyPrimes();
+//    System.out.println(isPrime(33));
+// ---prints 1st 20 prime numbers in void method call :
+//    getTwentyPrimes(20);
+    System.out.println(coinFlip());
+    System.out.println(randomWalk(8, ""));
+
 
   }// end of main
 
@@ -157,18 +162,67 @@ public class MethodsPractice {
       return finalString;
   }
 
+//
+
+  //    works for positive numbers, breaks for negative numbers:
   public static boolean isPrime(int number) {
-    if (number > 0) {
-      if (number % 2 == 0 && number !=2) {
-        return false;
-      } else if ((number % 1 == 0) || (number % number == 0)) {
-        return true;
+    boolean prime = false;
+    int divisibleCounter = 0;
+    for (int i = 1; i <= number; i++) {
+      if (number % i == 0) {
+        divisibleCounter++;
       }
-      return false;
     }
-    return false;
+    if (divisibleCounter <= 2) {
+      prime = true;
+      return prime;
+    } else if (divisibleCounter>2){
+      prime = false;
+      return prime;
+    }
+    return prime;
   }
 
+//  No tailing comma:
+  public static void getTwentyPrimes(int input){
+    int primeCounter = 0;
+    int number = 1;
+    while (primeCounter < input) {
+      if (isPrime(number)) {
+        if (primeCounter != input-1) {
+          System.out.print(number + ", ");
+          primeCounter++;
+        } else if (primeCounter == input -1) {
+          System.out.print(number);
+          primeCounter++;
+        }
+      }
+      number ++;
+    }
+  }
+
+//  ------------- MORE METHOD PRACTICE / PART DUEX --------------
+//Write a method called coinFlip that randomly returns a true or false value.
+  public static boolean coinFlip(){
+    Random rand = new Random();
+    return rand.nextBoolean();
+  }
+
+  public static String randomWalk(int number, String result){
+
+    if(number >0){
+      Random rand = new Random();
+      int print = rand.nextInt(2);
+      result += print;
+      number--;
+      return randomWalk(number, result);
+    }
+    return result;
+  }
+
+//  public static int countOnes(String result, int number){
+//    result += randomWalk(number)
+//  }
 
 
 }//end of class
