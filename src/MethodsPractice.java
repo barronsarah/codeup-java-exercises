@@ -30,8 +30,12 @@ public class MethodsPractice {
 //    System.out.println(isPrime(33));
 // ---prints 1st 20 prime numbers in void method call :
 //    getTwentyPrimes(20);
-    System.out.println(coinFlip());
-    System.out.println(randomWalk(8, ""));
+//    System.out.println(coinFlip());
+    String randomNumberString = randomWalk(13, "");
+    System.out.println(randomNumberString);
+    int numberOnes = countOnes(randomNumberString);
+    System.out.println(numberOnes);
+    System.out.println(countZeros(randomNumberString));
 
 
   }// end of main
@@ -220,9 +224,31 @@ public class MethodsPractice {
     return result;
   }
 
-//  public static int countOnes(String result, int number){
-//    result += randomWalk(number)
-//  }
+//  Write a method named countOnes that takes in a string of ones and zeroes and returns a count of the ones. -- REMEMBER TO HAVE DEFINE NUMBER AS A STRING BECAUSE YOU CAN'T COMPARE A STRING TO AN INT
+  public static int countOnes(String result){
+    int count = 0;
+    String number;
+    for(int i= 0; i<= result.length()-1; i++){
+      number = result.charAt(i) + "";
+      if(number.equals("1")){
+        count ++;
+      }
+    }
+    return count;
+  }
+
+  public static int countZeros(String result){
+    int counter= 0;
+    for(int i =0; i <= result.length()-1; i++){
+      String number = result.charAt(i) + "";
+      if(number.equals("0")){
+        counter ++;
+      }
+    } return counter;
+  }
+
+//  public static
+
 
 
 }//end of class
