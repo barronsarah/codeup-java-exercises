@@ -4,9 +4,11 @@ public class Circle {
 
   //this can not be changed
   private double radius;
+  public static int numberOfCircles = 0;
 
   //this is a Constructor with a radius that cannot be changed
   public Circle(double radius) {
+    numberOfCircles++;
     this.radius = radius;
   }
 
@@ -27,9 +29,9 @@ public class Circle {
 //    numberOfCircles++; <--- ADD THIS TO YOUR CONSTRUCTOR TO INCREASE NUMBER OF OBJECTS
 //  }
 //
-// public static int getNumberOfCircles() {
-//  return numberOfCircles;
-//}
+ public static int getNumberOfCircles() {
+  return numberOfCircles;
+}
 
   // this gets the area of a circle object
   public double getArea(){
