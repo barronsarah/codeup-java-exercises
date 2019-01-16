@@ -46,5 +46,10 @@ public class Circle {
     return circumference;
   }
 
+  //added from walkthrough:
+  public double getDiameter(){
+    return 2 * radius;
+  }
+
 
 }

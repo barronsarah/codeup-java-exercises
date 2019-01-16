@@ -10,6 +10,10 @@ public class Input {
     return scanner.nextLine();
   }
 
+  public String getString(){
+    return scanner.nextLine();
+  }
+
   public boolean yesNo(String prompt) {
     System.out.println(prompt);
     String input = scanner.next();
@@ -17,6 +21,23 @@ public class Input {
       return true;
     }
     return false;
+  }
+
+  public boolean yesNo() {
+    String input = scanner.next();
+    if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
+      return true;
+    }
+    return false;
+  }
+
+  public int getInt(){
+    return scanner.nextInt();
+  }
+
+  public int getInt(String prompt){
+    System.out.println(prompt);
+    return scanner.nextInt();
   }
 
   public int getInt(String prompt, int min, int max) {
@@ -31,9 +52,13 @@ public class Input {
     return input;
   }
 
-  public int getInt(String prompt){
+  public double getDouble(){
+    return scanner.nextDouble();
+  }
+
+  public double getDouble(String prompt){
     System.out.println(prompt);
-    return scanner.nextInt();
+    return scanner.nextDouble();
   }
 
   public double getDouble(String prompt, double min, double max) {
@@ -48,9 +73,5 @@ public class Input {
     return input;
   }
 
-  public double getDouble(String prompt){
-    System.out.println(prompt);
-    return scanner.nextDouble();
-  }
 
 }
