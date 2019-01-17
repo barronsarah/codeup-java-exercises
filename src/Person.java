@@ -1,7 +1,7 @@
 import com.sun.corba.se.impl.orb.PropertyOnlyDataCollector;
 
 public class Person {
-  public static void main(String[] args) {
+//  public static void main(String[] args) {
 //    Person person1 = new Person("Andrea");
 //    System.out.println(person1.getName());
 //    person1.setName("Sarah");
@@ -20,15 +20,15 @@ public class Person {
 //    System.out.println(person1 == person2);
 
     //this is another example of how setting the setName method REASSIGNS the name due to the set name not being private (meaning you can change it)
-    Person person1 = new Person("John");
-    Person person2 = person1;
-    System.out.println(person1.getName());
-    System.out.println(person2.getName());
-    person2.setName("Jane");
-    System.out.println(person1.getName());
-    System.out.println(person2.getName());
-
-  } //end of MAIN
+//    Person person1 = new Person("John");
+//    Person person2 = person1;
+//    System.out.println(person1.getName());
+//    System.out.println(person2.getName());
+//    person2.setName("Jane");
+//    System.out.println(person1.getName());
+//    System.out.println(person2.getName());
+//
+//  } //end of MAIN
 
   //METHODS CREATED FOR THE PERSON CLASS
   private String name;
