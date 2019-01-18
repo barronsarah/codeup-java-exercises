@@ -27,7 +27,7 @@ public class Square extends Quadrilateral {
 
   public Square (int side){
     super(side, side);
-    this.side = side;
+//    this.side = side;
   }
 
   @Override
@@ -48,8 +48,7 @@ public class Square extends Quadrilateral {
 
   @Override
   public int getArea() {
-    int area = (int) Math.pow(side, 2);
-    return area;
+    return (int) Math.pow(side, 2);
   }
 } // end of CLASS
 

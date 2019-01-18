@@ -19,6 +19,9 @@ public class ShapesTest {
     myShape2 = new Rectangle(6,4);
     System.out.println(((Rectangle) myShape2).getLength());
     System.out.println(((Rectangle) myShape2).getWidth());
+    
+
+
 
 
   } //end of MAIN
